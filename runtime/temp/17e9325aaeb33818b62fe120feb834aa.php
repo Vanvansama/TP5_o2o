@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\wamp64\www\Web_test\public/../application/bis\view\register\index.html";i:1500125835;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\header.html";i:1500083204;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\footer.html";i:1500087070;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\wamp64\www\Web_test\public/../application/bis\view\register\index.html";i:1500262016;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\header.html";i:1500169049;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\footer.html";i:1500168295;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -18,11 +18,11 @@
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/static/h-ui/css/H-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/static/h-ui.admin/css/H-ui.admin.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/lib/icheck/icheck.css" />
+<!-- <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/lib/icheck/icheck.css" /> -->
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/admin/h-ui/static/h-ui.admin/css/style.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" />
-  <link rel="stylesheet" type="text/css" href="__STATIC__/admin/uploadify/uploadify.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/common.css" /> -->
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/uploadify/uploadify.css" /> 
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -66,8 +66,8 @@
 		<div class="row cl">
               <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
               <div class="formControls col-xs-8 col-sm-9">
-                <input id="file_upload"  type="file" multiple="true" >
-                <img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
+                <input id="file_upload" type="file" multiple="true" >
+                <img style="display: none" id="upload_org_code_img" src="" width="" height="">
                 <input id="file_upload_image" name="logo" type="hidden" multiple="true" value="">
               </div>
         </div>
@@ -75,7 +75,7 @@
               <label class="form-label col-xs-4 col-sm-2">营业执照：</label>
               <div class="formControls col-xs-8 col-sm-9">
                 <input id="file_upload_other"  type="file" multiple="true" >
-                <img style="display: none" id="upload_org_code_img_other" src="" width="150" height="150">
+                <img style="display: none" id="upload_org_code_img_other" src="" width="" height="">
                 <input id="file_upload_image_other" name="licence_logo" type="hidden" multiple="true" value="">
               </div>
         </div>
@@ -208,18 +208,18 @@
 <script type="text/javascript" src="__STATIC__/admin/h-ui/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__STATIC__/admin/h-ui/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
-<!-- <script type="text/javascript" src="__STATIC__/admin/uploadify/jquery.uploadify.min.js"></script>
-<script type="text/javascript" src="__STATIC__/admin/js/image.js"></script> -->
+<script type="text/javascript" src="__STATIC__/admin/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/image.js"></script> 
 
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/ueditor/1.4.3/ueditor.config.js"></script>
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script>
  var SCOPE = {
-  'city_url' : '<?php echo url('api/city/getCitysByParentId'); ?>',
-  'category_url' : '<?php echo url('api/category/getCategoryByParentId'); ?>',
-	// 'uploadify_swf' : '__STATIC__/admin/uploadify/uploadify.swf',
-	// 'image_upload' : '<?php echo url('api/image/upload'); ?>',
+  'city_url'			 : 	'<?php echo url('api/city/getCitysByParentId'); ?>',
+  'category_url'	 : 	'<?php echo url('api/category/getCategoryByParentId'); ?>',
+	'uploadify_swf'  : 	'__STATIC__/admin/uploadify/uploadify.swf',
+	'image_upload' 	 : 	'<?php echo url('api/image/upload'); ?>',
  };
 </script>
 <!--分配编辑器-->

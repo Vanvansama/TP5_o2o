@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\wamp64\www\Web_test\public/../application/admin\view\category\index.html";i:1499996561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\wamp64\www\Web_test\public/../application/admin\view\category\index.html";i:1500001417;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 
@@ -40,7 +40,7 @@
 			</span>
 			<span class="r">共有数据：<strong>54</strong> 条</span>
 		</div>
-		<img style="margin:20px" width="280" height="140" src="<?php echo url('index/map'); ?>" />
+		<!-- <img style="margin:20px" width="280" height="140" src="<?php echo url('index/map'); ?>" /> -->
 		<div class="mt-20">
 			<table class="table table-border table-bordered table-bg table-hover table-sort">
 				<thead>

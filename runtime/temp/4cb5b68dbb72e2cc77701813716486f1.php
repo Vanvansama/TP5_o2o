@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\wamp64\www\Web_test\public/../application/admin\view\category\add.html";i:1499758163;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\wamp64\www\Web_test\public/../application/admin\view\category\add.html";i:1499845605;}*/ ?>
 <!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -65,9 +65,6 @@
 <script type="text/javascript" src="__STATIC__/admin/h-ui/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="__STATIC__/admin/h-ui/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
-<script type="text/javascript" src="__STATIC__/admin/h-ui/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
-<script type="text/javascript" src="__STATIC__/admin/h-ui/lib/jquery.validation/1.14.0/messages_zh.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('.skin-minimal input').iCheck({
@@ -75,12 +72,8 @@ $(function(){
 		radioClass: 'iradio-blue',
 		increaseArea: '20%'
 	});
-	
-	
-	
-	
-        
+ 
 </script>
-<!--/请在上方写此页面业务相关的脚本-->
+
 </body>
 </html>
