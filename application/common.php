@@ -44,3 +44,39 @@ function doCurl($url, $type=0, $data=[]){
   return $output;
   
 }
+//商户入驻申请
+function bisRegister($status){
+  if($status == 1){
+    $str = "入驻成功";
+  }elseif($status == 0){
+    $str = "待审核";
+  }elseif($status == 2){
+    $str = "非常抱歉，申请失败";
+  }else{
+    $str = "申请已被删除";
+  }
+  return $str;
+}
+
+//分页样式
+function pagination($obj){
+  if(!$obj){
+    return '';
+  }else{
+    return '<div class="cl pd-5 bg-1 bk-gray mt-20 tp5-o2o">'.$obj->render().'</div>';
+  }
+}
+
+function getSeCityName($path){
+  if(empty($path)){
+    return '';
+  }
+  if(preg_match('/,/', $path)){
+    $cityPath = explode(',', $path);
+    $cityId = $cityPath[1];
+  }else{
+    $cityId = $path;
+  }
+  $city = model('City')->get($cityId);
+  return $city->name;
+}

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\wamp64\www\Web_test\public/../application/admin\view\category\index.html";i:1500001417;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\wamp64\www\Web_test\public/../application/admin\view\category\index.html";i:1500344902;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 
@@ -80,7 +80,7 @@
 			</table>
 		</div>
 	</div>
-	<div class="cl pd-5 bg-1 bk-gray mt-20 tp5-o2o"><?php echo $categorys->render(); ?></div>
+	<?php echo pagination($categorys); ?>
 	<!--_footer 作为公共模版分离出去-->
 	<script type="text/javascript" src="__STATIC__/admin/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="__STATIC__/admin/h-ui/lib/layer/2.4/layer.js"></script>

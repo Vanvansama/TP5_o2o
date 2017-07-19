@@ -30,12 +30,18 @@ class Register extends Controller
       if(empty($lnglat) || $lnglat['status'] !=0 || $lnglat['status']['precise'] !=1){
         //$this->error('数据获取失败或者地址不精准');
       }
+      //判断用户是否存在
+      $accountResult = Model('BisAccount')->get(['username'=>$data['username']]);
+      if($accountResult){
+        $this->error('该用户存在');
+      }
       //商户基本信息入库
       $bisData = [
         'name'  =>  $data['name'],
         'city_id'  =>  $data['city_id'],
         'city_path'  =>  empty($data['se_city_id']) ? $data['city_id'] :$data['city_id'].','.$data['se_city_id'],
         'logo'  =>  $data['logo'],
+        'licence_logo'  =>  $data['licence_logo'],
         'description'  =>  empty($data['description']) ? '' : $data['description'],
         'bank_info'  =>  $data['bank_info'],
         'bank_user'  =>  $data['bank_user'],
@@ -43,7 +49,6 @@ class Register extends Controller
         'faren'  =>  $data['faren'],
         'faren_tel'  =>  $data['faren_tel'],
         'email'  =>  $data['email'],
-        
       ];
       $bisId = model('Bis')->add($bisData);
 
@@ -57,12 +62,14 @@ class Register extends Controller
       $locationData = [
         'bis_id'  =>  $bisId,
         'name'    =>  $data['name'],
+        'logo'    =>  $data['logo'],
+        'tel'    =>  $data['tel'],
         'contact' =>  $data['contact'],
         'category_id' =>  $data['category_id'],
         'category_path' =>  $data['category_id'].','.$data['cat'],
         'city_id'   =>    $data['city_id'],
         'city_path'  =>  empty($data['se_city_id']) ? $data['city_id'] :$data['city_id'].','.$data['se_city_id'],
-        'address'   =>    $data['address'],
+        'api_address'   =>    $data['address'],
         'open_time'   =>    $data['open_time'],
         'content'   =>    empty($data['content']) ? '' : $data['content'],
         'is_main'   =>    1,//代表总店
@@ -93,9 +100,15 @@ class Register extends Controller
       $content = "等待审核中，点击链接<a href='".$url."' target='_blank'>查看链接</a>查看";
       \phpmailer\Email::send($data['email'],$title,$content);
 
-      $this->success('申请成功');
+      $this->success('申请成功', url('register/waiting', ['id'=>$bisId]));
     }
-    public function waiting(){
-      echo 'test';
+    public function waiting($id){
+      if(empty($id)){
+        $this->error('error');
+      }
+      $detail = model('Bis')->get($id);
+      return $this->fetch('', [
+        'detail'  =>  $detail,
+      ]);    
     }
 }

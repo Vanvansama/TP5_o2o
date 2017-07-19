@@ -7,7 +7,10 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商户名称：</label>
 			<div class="formControls col-xs-8 col-sm-3">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="name">
+				<input type="text" class="input-text name" value="" placeholder="" id="" name="name">
+			</div>
+			<div class="formControls col-xs-8 col-sm-3 se_name">
+
 			</div>
 		</div>
 		
@@ -149,7 +152,10 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">用户名:</label>
 			<div class="formControls col-xs-8 col-sm-3">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="username">
+				<input type="text" class="input-text username" value="" placeholder="" id="" name="username">
+			</div>
+			<div class="formControls col-xs-8 col-sm-3 se_username">
+				
 			</div>
 		</div>
 		<div class="row cl">
@@ -174,10 +180,12 @@
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script>
  var SCOPE = {
-  'city_url'			 : 	'{:url('api/city/getCitysByParentId')}',
+  'city_url'		 : 	'{:url('api/city/getCitysByParentId')}',
   'category_url'	 : 	'{:url('api/category/getCategoryByParentId')}',
-	'uploadify_swf'  : 	'__STATIC__/admin/uploadify/uploadify.swf',
-	'image_upload' 	 : 	'{:url('api/image/upload')}',
+  'uploadify_swf'    :	'__STATIC__/admin/uploadify/uploadify.swf',
+  'image_upload' 	 : 	'{:url('api/image/upload')}',
+  'name_url'         :  '{:url('api/Bis/getBisname')}',
+  'username_url'     :  '{:url('api/account/getUsername')}',
  };
 </script>
 <!--分配编辑器-->
