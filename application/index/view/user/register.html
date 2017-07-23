@@ -20,7 +20,7 @@
 <body>
 
 	<div class="login-boxtitle">
-		<a href="home/demo.html"><img alt="" src="../images/logobig.png" /></a>
+		<a href=""><img alt="" src="../images/logobig.png" /></a>
 	</div>
 
 	<div class="res-banner">
@@ -36,64 +36,66 @@
 
 					<div class="am-tabs-bd">
 						<div class="am-tab-panel am-active">
-							<form method="post">
-
+							<form method="post" action="{:url('user/register')}">
+								<div class="user-email">
+									<label for="email"><i class="am-icon-user"></i></label>
+									<input type="text" name="username" id="username" placeholder="请输入用户名" class="username">
+								<div class="se_username"></div>
+								</div>
 								<div class="user-email">
 									<label for="email"><i class="am-icon-envelope-o"></i></label>
-									<input type="email" name="" id="email" placeholder="请输入邮箱账号">
+									<input type="email" name="email" id="email" placeholder="请输入邮箱账号">
 								</div>
 								<div class="user-pass">
 									<label for="password"><i class="am-icon-lock"></i></label>
-									<input type="password" name="" id="password" placeholder="设置密码">
+									<input type="password" name="password" id="password" placeholder="设置密码">
 								</div>
 								<div class="user-pass">
 									<label for="passwordRepeat"><i class="am-icon-lock"></i></label>
-									<input type="password" name="" id="passwordRepeat" placeholder="确认密码">
+									<input type="password" name="repassword" id="passwordRepeat" placeholder="确认密码">
 								</div>
-
+								<div class="user-pass">
+									<label><i class="am-icon-play"></i></label>
+									<input type="text" placeholder="验证码" name="verifycode" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}"
+									 value="验证码:" style="width:160px;">
+									<div style="float:right;">{:captcha_img()}</div>
+								</div>
+								<div class="am-cf">
+									<input type="submit" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
+								</div>
 							</form>
-
-							<div class="login-links">
-								<label for="reader-me">
-											<input id="reader-me" type="checkbox"> 点击表示您同意商城《服务协议》
-										</label>
-							</div>
-							<div class="am-cf">
-								<input type="submit" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
-							</div>
-
 						</div>
 
 						<div class="am-tab-panel">
-							<form method="post">
+							<form method="post" action="">
+								<div class="user-email">
+									<label for="email"><i class="am-icon-user"></i></label>
+									<input type="text" name="" id="" placeholder="请输入用户名">
+								</div>
 								<div class="user-phone">
 									<label for="phone"><i class="am-icon-mobile-phone am-icon-md"></i></label>
-									<input type="tel" name="" id="phone" placeholder="请输入手机号">
+									<input type="tel" name="mobile" id="phone" placeholder="请输入手机号">
 								</div>
 								<div class="verification">
 									<label for="code"><i class="am-icon-code-fork"></i></label>
 									<input type="tel" name="" id="code" placeholder="请输入验证码">
-									<a class="btn" href="javascript:void(0);" onclick="sendMobileCode();" id="sendMobileCode">
-												<span id="dyMobileButton">获取</span></a>
+									<a class="btn" href="javascript:void(0);" onclick="" id="sendMobileCode">
+										<span id="dyMobileButton">获取</span>
+									</a>
 								</div>
 								<div class="user-pass">
 									<label for="password"><i class="am-icon-lock"></i></label>
-									<input type="password" name="" id="password" placeholder="设置密码">
+									<input type="password" name="password" id="password" placeholder="设置密码">
 								</div>
 								<div class="user-pass">
 									<label for="passwordRepeat"><i class="am-icon-lock"></i></label>
-									<input type="password" name="" id="passwordRepeat" placeholder="确认密码">
+									<input type="password" name="repassword" id="passwordRepeat" placeholder="确认密码">
 								</div>
+								
 							</form>
-							<div class="login-links">
-								<label for="reader-me">
-											<input id="reader-me" type="checkbox"> 点击表示您同意商城《服务协议》
-										</label>
-							</div>
 							<div class="am-cf">
 								<input type="submit" name="" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
 							</div>
-
 							<hr>
 						</div>
 
@@ -112,7 +114,7 @@
 		<div class="footer ">
 			<div class="footer-hd ">
 				<p>
-					<a href="# ">恒望科技</a>
+					<a href="# ">糯米科技</a>
 					<b>|</b>
 					<a href="# ">商城首页</a>
 					<b>|</b>
@@ -123,7 +125,7 @@
 			</div>
 			<div class="footer-bd ">
 				<p>
-					<a href="# ">关于恒望</a>
+					<a href="# ">关于糯米</a>
 					<a href="# ">合作伙伴</a>
 					<a href="# ">联系我们</a>
 					<a href="# ">网站地图</a>
@@ -131,5 +133,11 @@
 			</div>
 		</div>
 </body>
+<script>
+ var SCOPE = {
+  'username_url'     :  '{:url('api/user/getUsername')}',
+ };
+</script>
+<script src="__STATIC__/index/js/common.js"></script>
 
 </html>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\wamp64\www\Web_test\public/../application/bis\view\register\index.html";i:1500262016;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\header.html";i:1500169049;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\footer.html";i:1500168295;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\wamp64\www\Web_test\public/../application/bis\view\register\index.html";i:1500294888;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\header.html";i:1500169049;s:72:"D:\wamp64\www\Web_test\public/../application/bis\view\public\footer.html";i:1500168295;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -38,7 +38,10 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商户名称：</label>
 			<div class="formControls col-xs-8 col-sm-3">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="name">
+				<input type="text" class="input-text name" value="" placeholder="" id="" name="name">
+			</div>
+			<div class="formControls col-xs-8 col-sm-3 se_name">
+
 			</div>
 		</div>
 		
@@ -180,7 +183,10 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">用户名:</label>
 			<div class="formControls col-xs-8 col-sm-3">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="username">
+				<input type="text" class="input-text username" value="" placeholder="" id="" name="username">
+			</div>
+			<div class="formControls col-xs-8 col-sm-3 se_username">
+				
 			</div>
 		</div>
 		<div class="row cl">
@@ -216,10 +222,12 @@
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script>
  var SCOPE = {
-  'city_url'			 : 	'<?php echo url('api/city/getCitysByParentId'); ?>',
+  'city_url'		 : 	'<?php echo url('api/city/getCitysByParentId'); ?>',
   'category_url'	 : 	'<?php echo url('api/category/getCategoryByParentId'); ?>',
-	'uploadify_swf'  : 	'__STATIC__/admin/uploadify/uploadify.swf',
-	'image_upload' 	 : 	'<?php echo url('api/image/upload'); ?>',
+  'uploadify_swf'    :	'__STATIC__/admin/uploadify/uploadify.swf',
+  'image_upload' 	 : 	'<?php echo url('api/image/upload'); ?>',
+  'name_url'         :  '<?php echo url('api/Bis/getBisname'); ?>',
+  'username_url'     :  '<?php echo url('api/account/getUsername'); ?>',
  };
 </script>
 <!--分配编辑器-->

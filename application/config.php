@@ -41,7 +41,7 @@ return [
     // 是否开启多语言
     'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
-    'default_filter'         => 'htmlentitles',
+    'default_filter'         => '',
     // 默认语言
     'default_lang'           => 'zh-cn',
     // 应用类库后缀
@@ -236,4 +236,23 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+    //验证码配置
+    'captcha'  => [
+        // 验证码字符集合
+        'codeSet'  => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY', 
+        // 验证码字体大小(px)
+        'fontSize' => 16, 
+        // 是否画混淆曲线
+        'useCurve' => true, 
+         // 验证码图片高度
+        'imageH'   => 0,
+        // 验证码图片宽度
+        'imageW'   => 0, 
+        // 验证码位数
+        'length'   => 4, 
+        // 验证成功后是否重置        
+        'reset'    => true
+	],
+
 ];

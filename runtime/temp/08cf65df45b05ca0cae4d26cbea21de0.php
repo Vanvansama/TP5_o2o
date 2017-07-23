@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\wamp64\www\Web_test\public/../application/admin\view\index\index.html";i:1500448156;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\wamp64\www\Web_test\public/../application/admin\view\index\index.html";i:1500512706;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -103,8 +103,8 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 推荐位管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="" data-title="添加推荐位内容" href="javascript:void(0)">添加推荐位内容</a></li>
-					<li><a data-href="" data-title="推荐位列表" href="javascript:void(0)">推荐位列表</a></li>
+					<li><a data-href="<?php echo url('featured/add'); ?>" data-title="添加推荐位内容" href="javascript:void(0)">添加推荐位内容</a></li>
+					<li><a data-href="<?php echo url('featured/index'); ?>" data-title="推荐位列表" href="javascript:void(0)">推荐位列表</a></li>
 			</ul>
 		</dd>
 	</dl>
