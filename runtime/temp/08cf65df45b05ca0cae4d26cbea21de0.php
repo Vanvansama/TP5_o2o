@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\wamp64\www\Web_test\public/../application/admin\view\index\index.html";i:1500512706;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\wamp64\www\Web_test\public/../application/admin\view\index\index.html";i:1500857304;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -112,7 +112,7 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 团购商品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="" data-title="商品团购提交" href="javascript:;">商品团购提交</a></li>
+					<li><a data-href="<?php echo url('deal/apply'); ?>" data-title="商品团购提交" href="javascript:;">商品团购提交</a></li>
 					<li><a data-href="<?php echo url('deal/index'); ?>" data-title="团购列表" href="javascript:void(0)">团购列表</a></li>
 			</ul>
 		</dd>

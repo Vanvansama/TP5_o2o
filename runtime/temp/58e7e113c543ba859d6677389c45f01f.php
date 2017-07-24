@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\wamp64\www\Web_test\public/../application/admin\view\deal\index.html";i:1500450297;s:74:"D:\wamp64\www\Web_test\public/../application/admin\view\public\header.html";i:1500512995;s:74:"D:\wamp64\www\Web_test\public/../application/admin\view\public\footer.html";i:1500512994;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\wamp64\www\Web_test\public/../application/admin\view\deal\apply.html";i:1500856969;s:74:"D:\wamp64\www\Web_test\public/../application/admin\view\public\header.html";i:1500512995;s:74:"D:\wamp64\www\Web_test\public/../application/admin\view\public\footer.html";i:1500512994;}*/ ?>
 <!--包含头部文件-->
 <!DOCTYPE HTML>
 <html>
@@ -36,7 +36,7 @@
 <div class="page-container">
   <div class="cl pd-5 bg-1 bk-gray mt-20">
     <div class="text-c">
-    <form action="<?php echo url('deal/index'); ?>" method="get">
+      <form action="<?php echo url('deal/apply'); ?>" method="get">
 		 <span class="select-box inline">
 			<select name="category_id" class="select">
               <option value="0">全部分类</option>
@@ -85,16 +85,16 @@
         <td><?php echo $categoryArrs[$vo['category_id']]; ?></td>
         <td><?php echo $cityArrs[$vo['city_id']]; ?></td>
         <td><?php echo $vo['buy_count']; ?></td>
-        <td><?php echo date("y-m-d h:i", $vo['start_time']); ?><br /><?php echo date("y-m-d h:i", $vo['end_time']); ?></td>
+        <td><?php echo $vo['start_time']; ?><br /><?php echo $vo['end_time']; ?></td>
         <td><?php echo $vo['create_time']; ?></td>
-        <td><?php echo status($vo['status']); ?></td>
-        <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="查看"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+        <td class="td-status"><a href="<?php echo url('deal/status',['id'=>$vo['id'], 'status'=>1]); ?>" title="点击修改状态"><?php echo status($vo['status']); ?></a></td>
+    <td class="td-manage"> <a style="text-decoration:none" class="ml-5" onClick="o2o_del('<?php echo url('deal/status', ['id'=>$vo['id'], 'status'=>-1]); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a> <a style="text-decoration:none" class="ml-5"  href="<?php echo url('deal/status',['id'=>$vo['id'], 'status'=>2]); ?>" title="不通过"><i class="Hui-iconfont">不通过</i></a></td>
       </tr>
       <?php endforeach; endif; else: echo "" ;endif; ?>
       </tbody>
     </table>
   </div>
-  <?php echo pagination($deals); ?>
+    <?php echo pagination($deals); ?>
 </div>
 <!--包含头部文件-->
 <script type="text/javascript" src="__STATIC__/admin/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
