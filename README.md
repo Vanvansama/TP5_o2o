@@ -20,8 +20,9 @@
 -------------
 ThinkPHP仿电商网站
 
-#### 示例:  
-*红色标签内为已实现功能区域*
+## 示例:  
+>色标签内为已实现功能区域
+
 商城前台
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118424(1).png)
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118621(1).jpg)
