@@ -23,20 +23,20 @@ ThinkPHP仿电商网站
 ## 示例:  
 >色标签内为已实现功能区域
 
->商城前台
+#### 商城前台
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118424(1).png)
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118621(1).jpg)
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118695(1).png)
->前台商品详情页
+#### 前台商品详情页
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501119288(1).jpg)
->前台注册
+#### 前台注册
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501119386(1).jpg)
-前台登陆
+#### 前台登陆
 ![商城前台登陆](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118734(1).png)
-==============
->管理者后台登陆
+
+#### 管理者后台登陆
 ![商城后台登陆](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118762(1).png)
->后台主页面
+#### 后台主页面
 ![商城后台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118799(1).jpg)
 ![商城后台](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118831(1).png)
 ![商城后台](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118874(1).png)
