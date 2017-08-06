@@ -1,31 +1,13 @@
-开发进度
-===============
- + 完成后台模块开发(管理用户，商户，前台推荐位，前台分类信息)
- + 商户管理模块开发(管理商品信息)
- + 前台主页面
- + 商品页面
- + 订单页面(暂时搁置，2017/7/24)
- 
-学习进度
-===============
- + 封装百度地图模块
- + 封装php邮件模块
- + 封装微信支付模块
- + tp5验证码
- + tp5分页机制
- + tp5 validate机制
- + tp5 session会话机制
-
 # 项目名称
 -------------
 ThinkPHP仿电商网站
 
 ## 示例:  
-===============
+-------------
 >色标签内为已实现功能区域
 
 #### 商城前台
-===============
+-------------
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118424(1).png)
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118621(1).jpg)
 ![商城前台首页](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118695(1).png)
@@ -48,17 +30,23 @@ ThinkPHP仿电商网站
 ![商城后台](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118831(1).png)
 ![商城后台](https://raw.githubusercontent.com/Vanvansama/thinkphp_o2o/master/image/1501118874(1).png)
 
-
-### 特性（可选）
-- 特性A
-
-- 特性B
-
-### 原理说明（可选）
-阐述项目是基于什么思路设计的
+原理说明
+===============
+ + 封装百度地图模块
+ + 封装php邮件模块
+ + 封装微信支付模块
+ + tp5验证码
+ + tp5分页机制
+ + tp5 validate机制
+ + tp5 session会话机制
 
 ### TODO
-接下来的开发/维护计划。
-
+开发进度
+===============
+ + 完成后台模块开发(管理用户，商户，前台推荐位，前台分类信息)
+ + 商户管理模块开发(管理商品信息)
+ + 前台主页面
+ + 商品页面
+ + 订单页面(暂时搁置，2017/7/24)
 
 
